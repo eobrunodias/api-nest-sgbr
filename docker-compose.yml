@@ -1,0 +1,14 @@
+#  docker-compose up -d
+
+version: "3.7"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: sgbr_db
+    ports:
+      - "5432:5432"
